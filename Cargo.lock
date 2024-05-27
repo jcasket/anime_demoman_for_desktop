@@ -171,7 +171,7 @@ dependencies = [
 
 [[package]]
 name = "anime_demoman_for_desktop"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "bevy",
  "bevy_asset_loader",

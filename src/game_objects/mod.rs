@@ -1,1 +1,1 @@
-pub mod demoman;
+pub mod spinner;
