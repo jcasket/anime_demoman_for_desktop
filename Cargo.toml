@@ -27,6 +27,9 @@ opt-level = 3
 [workspace]
 resolver = "2" # Important! wgpu/Bevy needs this!
 
+# add --features "foo bar lol" as a space seperated list of the features you want.
 [features]
-# use --features "mute" in your cargo commands to not go insane during devel
+# remove the audio features of the program so during devel you don't go insane.
 mute = []
+# framerate diagnostics.
+no_diagnostics = []

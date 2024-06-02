@@ -4,9 +4,9 @@ mod player;
 
 use crate::player::player::PlayerPlugin;
 use bevy::app::{App, Startup, Update};
-#[cfg(debug_assertions)]
+#[cfg(not(feature = "no_diagnostics"))]
 use bevy::diagnostic::LogDiagnosticsPlugin;
-#[cfg(debug_assertions)]
+#[cfg(not(feature = "no_diagnostics"))]
 use bevy::diagnostic::FrameTimeDiagnosticsPlugin;
 use bevy::pbr::DirectionalLightShadowMap;
 use bevy::prelude::default;
@@ -47,9 +47,9 @@ fn main() {
                 }),
                 ..default()
             }),
-            #[cfg(debug_assertions)]
+            #[cfg(not(feature = "no_diagnostics"))]
             LogDiagnosticsPlugin::default(),
-            #[cfg(debug_assertions)]
+            #[cfg(not(feature = "no_diagnostics"))]
             FrameTimeDiagnosticsPlugin,
         ))
         .insert_resource(DirectionalLightShadowMap { size: 2048 })
